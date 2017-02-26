@@ -12,3 +12,9 @@ addons:
   mongodb: '~1.3.6'
 services:
 - mongodb
+before_script: 
+- bower install"
+script:
+- npm run lint:ci
+- npm test
+- npm run build:prod
