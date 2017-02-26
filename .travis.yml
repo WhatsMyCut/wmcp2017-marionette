@@ -13,7 +13,7 @@ addons:
 services:
 - mongodb
 before_script: 
-- bower install"
+- bower install
 script:
 - npm run lint:ci
 - npm test
