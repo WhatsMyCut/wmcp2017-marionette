@@ -10,9 +10,7 @@
     "lint:changed": "git diff --name-only --diff-filter=ACMRTUB `git merge-base HEAD master` | grep '\\.js$' | xargs eslint --",
     "start": "gulp build:watch",
     "watch": "gulp build:watch",
-    "test": "jest",
-    "test:changed": "jest -o",
-    "test:watch": "jest --watch"
+    "test": "mocha"
   },
   "private": true,  
   "dependencies": {
