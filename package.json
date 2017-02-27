@@ -10,7 +10,7 @@
     "lint:changed": "git diff --name-only --diff-filter=ACMRTUB `git merge-base HEAD master` | grep '\\.js$' | xargs eslint --",
     "start": "gulp build:watch",
     "watch": "gulp build:watch",
-    "test": "mocha-phantomjs -R dot /test/SpecRunner.js"
+    "test": "mocha-phantomjs -R spec test/index.html"
   },
   "private": true,
   "preferGlobal": true,
@@ -59,6 +59,7 @@
     "del": "^2.2.0",
     "eslint": "^2.10.2",
     "eslint-plugin-extra-rules": "^0.6.1",
+    "sass-lint": "~1.10.2",
     "matchdep": "~0.1.2",
     "mocha-phantomjs": "~3.1.0",
     "chai": "~3.5.0",
