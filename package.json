@@ -10,10 +10,14 @@
     "lint:changed": "git diff --name-only --diff-filter=ACMRTUB `git merge-base HEAD master` | grep '\\.js$' | xargs eslint --",
     "start": "gulp build:watch",
     "watch": "gulp build:watch",
-    "test": "mocha-phantomjs -R spec test/**"
+    "test": "mocha-phantomjs -R dot /test/SpecRunner.js"
   },
-  "private": true,  
+  "private": true,
+  "preferGlobal": true,
   "dependencies": {
+    "graceful-fs": "~4.1.0",
+    "minimatch": "~3.0.2",
+    "pug": "~2.0.0-beta11",
     "express": "~3.2.4",
     "request": "~2.21.0",
     "async": "~0.2.8",
@@ -26,13 +30,14 @@
     "jquery": "^2.2.4",
     "lodash": "^4.13.1",
     "bootstrap-sass": "^3.3.6",
+    "grunt": "~0.4.0",
     "underscore": "~1.8.3"
   },
   
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "bower": "~1.8.0",
-    "grunt": "~1.0.1",
+    "grunt-cli": "~1.2.0",
     "grunt-contrib-copy": "~0.4.0",
     "grunt-contrib-concat": "~0.2.0",
     "grunt-contrib-coffee": "~0.6.6",
@@ -52,11 +57,12 @@
     "grunt-open": "~0.2.0",
     "grunt-express-server": "~0.5.3",
     "del": "^2.2.0",
-    "enzyme": "^2.6.0",
     "eslint": "^2.10.2",
     "eslint-plugin-extra-rules": "^0.6.1",
     "matchdep": "~0.1.2",
     "mocha-phantomjs": "~3.1.0",
+    "chai": "~3.5.0",
+    "sinon": "~1.17.7",
     "jshint-stylish": "~2.2.1",
     "jest": "^18.1.0",
     "grunt-exec": "~1.0.1",
